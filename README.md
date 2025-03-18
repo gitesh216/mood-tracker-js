@@ -18,7 +18,7 @@ A simple and interactive **Daily Mood Tracker** web application that allows user
 ## 📸 Screenshots  
 
 ### 🔹 **Mood Selection Screen and Calendar View**  
-![image](https://github.com/user-attachments/assets/4304f191-562c-465c-8d12-29237963e845)
+![image]([https://github.com/user-attachments/assets/4304f191-562c-465c-8d12-29237963e845](https://mood-tracker-js-git-main-gitesh-zopes-projects.vercel.app/))
  
 
 ---
