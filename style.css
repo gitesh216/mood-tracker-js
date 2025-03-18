@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.mood-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: auto;
+}
+
+#mood-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.mood-btn {
+  position: relative;
+  font-size: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.mood-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Tooltip Text */
+.mood-btn::before {
+  content: attr(data-mood-text);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.mood-btn:hover::before {
+  opacity: 1;
+}
+
+.daily-mood {
+  font-size: 18px;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.update-m p {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #666;
+}
+
+#updateMood {
+  padding: 8px 15px;
+  font-size: 14px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#updateMood:hover {
+  background: #0056b3;
+}
+
+.wrapper {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.current-date {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icons span {
+  cursor: pointer;
+  font-size: 24px;
+  transition: color 0.2s;
+}
+
+.icons span:hover {
+  color: #007bff;
+}
+
+.weeks,
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  list-style: none;
+  margin-top: 10px;
+}
+
+.weeks li,
+.days li {
+  padding: 8px;
+  font-size: 18px;
+  color: #555;
+}
+
+.days li {
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+.days li.active {
+  /* color: #fff; */
+  background-color: #7FDBFF;
+  color: #007bff;
+  border-radius: 8px;
+}
+
+.days li:hover {
+  background: #dbeafe;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .mood-container,
+  .wrapper {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .mood-btn {
+    font-size: 20px;
+  }
+
+  .icons span {
+    font-size: 20px;
+  }
+}
